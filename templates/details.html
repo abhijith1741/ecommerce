@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+    <!--  About Section  -->
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">{{c_name}}</h2>
+    </div>
+    <div class="gallary row">
+        {% for i in pg.object_list %}
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src={{i.img.url}} alt="not getting" class="gallary-img" style="height:300px"><br>
+            <div>
+                {{i.name | capfirst}}<br>
+                Price: {{i.price}}
+            </div>
+            <a href="{{i.get_url}}" class="gallary-overlay">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        {% endfor %}
+    </div><br>
+<div>
+    <center>
+    {% for p in pg.paginator.page_range %}
+    <a href="?page={{p}}" class="btn btn-danger">{{p}}</a>
+        {% endfor %}
+    </center>
+</div>
+{% endblock %}

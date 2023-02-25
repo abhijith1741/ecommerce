@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="Devcrud">
+    <title>FoodHut | Free Bootstrap 4.3.x template</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'home/assets/vendors/themify-icons/css/themify-icons.css' %}">
+
+    <link rel="stylesheet" href="{% static 'home/assets/vendors/animate/animate.css' %}">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="{% static 'home/assets/css/foodhut.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+form.example{
+	width: 80%
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+	padding-right: 130px;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #ff214f;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+	height: 100%;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+            <a class="navbar-brand m-auto" href="#">
+                <img src="{% static 'home/assets/imgs/logo.svg' %}" class="brand-img" alt="">
+                <span class="brand-txt">Food Hut</span>
+            </a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#gallary">Gallary</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cart' %}">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- header -->
+     {% block body %}
+
+     {% endblock %}
+
+<div class="bg-dark text-light text-center border-top wow fadeIn">
+        <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Made with Abhijith Lenin</p>
+    </div>
+    <!-- end of page footer -->
+
+	<!-- core  -->
+    <script src="{% static 'home/assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'home/assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+    <!-- bootstrap affix -->
+    <script src="{% static 'home/assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+    <!-- wow.js -->
+    <script src="{% static 'home/assets/vendors/wow/wow.js' %}"></script>
+
+    <!-- google maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- FoodHut js -->
+    <script src="{% static 'home/assets/js/foodhut.js' %}"></script>
+
+</body>
+</html>
